@@ -1,0 +1,128 @@
+.header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ececec;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__items {
+    display: flex;
+    margin-left: 91px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding: 0px;
+
+    & .item:not(:last-child) {
+            margin-right: 50px;
+        }
+
+}
+
+.header__item {
+       margin-left: 30px;
+& .item:not(:last-child) {
+        margin-left: 30px;
+    }
+
+   }
+
+.header__nav.link {
+       font-family: var(--secondary-font);
+       color: #2196f3;
+       font-weight: 700;
+       font-size: 26px;
+       line-height: calc(31 / 26);
+       letter-spacing: 0.03em;
+   }
+
+.item-nav-studio {
+       color: #212121;
+       font-weight: 700;
+       font-size: 26px;
+       line-height: calc(31 / 26);
+       letter-spacing: 0.03em;
+   }
+
+   .nav-item.studio {
+       position: relative;
+       color: var(--accent-txt-cl);
+   }
+
+   .nav-item.studio::after {
+       content: '';
+       display: block;
+       width: 100%;
+       height: 4px;
+
+       position: absolute;
+       bottom: 0px;
+       left: 0px;
+
+       border-radius: 4px;
+       background-color: var(--accent-txt-cl);
+   }
+
+   .nav-item {
+       display: block;
+       padding-top: 32px;
+       padding-bottom: 32px;
+
+       font-weight: 500;
+       font-size: 14px;
+       line-height: calc(16 / 14);
+       letter-spacing: 0.02em;
+
+       transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+       &:hover,
+       &:focus {
+        color: var(--accent-txt-cl);
+       }
+   }
+
+   .header__contacts {
+       font-weight: 500;
+       font-size: 14px;
+       line-height: calc(16 / 14);
+       letter-spacing: 0.02em;
+
+       display: flex;
+       align-items: center;
+       padding-left: 0px;
+       padding-inline-start: 0px;
+       margin-left: auto;
+       margin-block-start: 0px;
+       margin-block-end: 0px;
+   }
+
+   .header__tel {
+        color: var(--sec-txt-cl);
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+        &:hover,
+        &:focus {
+            color: var(--accent-txt-cl);
+        }
+    }
+
+   .header__mail {
+       color: var(--sec-txt-cl);
+       display: block;
+       padding-top: 32px;
+       padding-bottom: 32px;
+
+       transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+    &:hover,
+        &:focus {
+            color: var(--accent-txt-cl);
+        }
+   }

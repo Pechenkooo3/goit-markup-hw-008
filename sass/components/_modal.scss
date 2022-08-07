@@ -1,0 +1,150 @@
+.modal {
+    position: absolute;
+    background-color: white;
+    width: 528px;
+
+    padding: 40px;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    opacity: 1;
+    transition: ease-in-out 700ms;
+}
+
+.modal__form {
+    align-items: center;
+}
+
+.modal__form-title {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    letter-spacing: 0.03em;
+}
+
+.register-form__group {
+    position: relative;
+
+    display: block;
+    margin-bottom: 10px;
+
+    &:last-child{margin-bottom: 0px;}
+}
+
+
+.register-form__name {
+    display: block;
+    text-align: left;
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+
+.register-form__icon {
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+
+    transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+.register-form__input,
+.register-form__comment {
+    width: 100%;
+    padding: 12px;
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+textarea::placeholder {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.register-form__input:hover,
+.register-form__input:focus {
+    border-color: var(--accent-txt-cl);
+}
+
+.register-form__group:hover .register-form__icon {
+    fill: var(--accent-txt-cl);
+}
+
+.register-form__input:focus+.register-form__icon {
+    fill: var(--accent-txt-cl);
+}
+
+.register-form__comment {
+    height: 120px;
+    resize: none;
+
+    padding: 16px 12px;
+
+    &:hover,
+    &:focus {
+        border-color: var(--accent-txt-cl);}
+}
+
+
+.register-form__agreement {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.mailing-icon {
+    transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+.register-chekbox:checked+.mailing-icon .mailing-icon-uncheck {
+    opacity: 1;
+}
+
+.register-chekbox:checked+.mailing-icon .mailing-icon-check {
+    opacity: 0;
+}
+
+.mailing-icon-uncheck {
+    opacity: 0;
+    transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+.mailing-icon-check {
+    transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+}
+
+.mailing-link {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: var(--accent-txt-cl);
+}
+
+.mailling-text {
+    user-select: none;
+
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: #757575;
+}
