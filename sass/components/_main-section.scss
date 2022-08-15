@@ -1,31 +1,68 @@
 .main-section {
+    
     text-align: center;
     background-color: var(--darc-bg-cl);
-    background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/Img.jpg);
+    background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 600px;
+    // height: 600px;
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
 
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    background-image:linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+     url(../../images/bg-fon/img@1x-sm.png);
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image:linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/bg-fon/img@2x-sm.png);
+        }
+
+    @media screen and(min-width:768px) {
+        background-image:linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/bg-fon/img@1x-md.png);
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image:linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/bg-fon/img@2x-md.png);
+                }
+        
+    }
+
+    @media screen and(min-width:1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        background-image:linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/bg-fon/Img@1x-lg.png);
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image:linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/bg-fon/img@2x-lg.png);
+                }
+        
+    }
 }
 
 .main-section__title {
-    color: white;
     font-weight: 900;
-    font-size: 44px;
-    line-height: calc(60 / 44);
+    font-size: 26px;
+    line-height: calc(42 / 26);
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-
+    color: white;
     margin: 0px;
     margin-bottom: 30px;
+   
+    @media screen and(min-width: 768px) {
+        font-size: 44px;
+        line-height: calc(60 / 44);
+        
+        
+    }
+  
 }
 
 .main-section__backdrop {
@@ -50,6 +87,7 @@
 }
 
 .backdrop.is-hidden .modal {
+    
     opacity: 0;
     transition: ease-in-out 500ms;
 }

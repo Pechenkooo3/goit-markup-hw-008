@@ -7,6 +7,12 @@
     margin-right: 10px;
 
     transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+    @media screen and(max-width:1190px) {
+            width: 14px;
+            height: 10px;
+    
+        }
 }
 
 .header__mail:hover .header__envelope {
@@ -28,6 +34,12 @@
     margin-right: 10px;
 
     transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+
+    @media screen and(max-width:1190px) {
+            width: 10px;
+            height: 14px;
+    
+        }
 }
 
 .header__tel:hover .header__smartphone {
@@ -40,5 +52,30 @@
 
 .header__smartphone:focus {
     fill: var(--accent-txt-cl);
+}
+
+
+// menu
+.menu__icon-burger {
+    display: none;
+    fill: #212121;
+}
+
+.menu__icon-close{
+    display: block;
+    fill: #212121;
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-txt-cl);
+    }
+}
+
+.menu__button.is-open .menu__icon-close{
+    display: none;
+}
+
+.menu__button.is-open .menu__icon-burger {
+    display: block;
 }
 

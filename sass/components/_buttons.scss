@@ -1,4 +1,6 @@
 .main-section__btn {
+
+
     font-family: inherit;
     background-color: var(--accent-txt-cl);
     color: white;
@@ -6,7 +8,7 @@
     line-height: calc(30 / 16);
     letter-spacing: 0.06em;
     cursor: pointer;
-    padding: 10px 32px;
+    padding: 10px 24px;
     border: none;
     border-radius: 4px;
 
@@ -16,6 +18,10 @@
     &:focus {
             background-color: #188ce8;
     }
+
+        @media screen and(min-width: 1200px){
+    padding: 10px 32px;
+        }
 }
 
 /* Portfolio buttons */
@@ -23,6 +29,17 @@
 .btn-section {
     padding-top: 94px;
     padding-bottom: 94px;
+
+    @media screen and(max-width:480px) {
+        padding-top: 0px;
+    }
+}
+
+.main-btn__bottoms{
+    @media screen and(max-width:480px) {
+        margin-top: 7px;
+       
+    }
 }
 
 .btn-section__lits {
@@ -30,10 +47,22 @@
     justify-content: center;
     padding-left: 0px;
     margin: 0px;
+
+    @media screen and(max-width:480px) {
+        flex-wrap: wrap;
+        justify-content: left;
+        width: 326px;
+        gap: 8px;
+        margin-top: 60px;
+    }
 }
 
 .btn-section__lits .main-btn__bottoms+.main-btn__bottoms {
     margin-left: 8px;
+@media screen and(max-width:480px){
+    margin-left: 0px;
+    }
+      
 }
 
 .main-btn__item {
@@ -140,5 +169,26 @@
     &:hover,
     &:focus {
         background-color: #188ce8;}
+
+    @media screen and(max-width:1199px) {
+        margin-top: 20px;
+    }
+        
+}
+
+// menu burger
+.menu__button{
+    display: none;
+
+    @media screen and (max-width:767px) {
+        position: relative;
+        display: inline-flex;
+        margin: 0;
+        margin-left: auto;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        z-index: 2000;
+    }
 }
 

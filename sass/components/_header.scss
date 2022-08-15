@@ -1,15 +1,27 @@
 .header {
+    position: relative;
     display: flex;
     align-items: center;
+
     border-bottom: 1px solid #ececec;
 }
+
+
 
 .header__nav {
     display: flex;
     align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
+   
 
 .header__items {
+    @media screen and(max-width:767px) {
+            display: none;
+    
+        }
+   
     display: flex;
     margin-left: 91px;
     margin-block-start: 0px;
@@ -22,15 +34,7 @@
 
 }
 
-.header__item {
-       margin-left: 30px;
-& .item:not(:last-child) {
-        margin-left: 30px;
-    }
-
-   }
-
-.header__nav.link {
+.header__logo.link {
        font-family: var(--secondary-font);
        color: #2196f3;
        font-weight: 700;
@@ -97,9 +101,58 @@
        margin-left: auto;
        margin-block-start: 0px;
        margin-block-end: 0px;
+
+    @media screen and(max-width:767px) {
+        display: none;
+    
+        }
+    @media screen and(max-width:1190px) {
+        
+        font-size: 12px;
+        line-height: calc(14 / 12);
+        margin-right: 15px;
+    }
+                
+
+    @media screen and(min-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 96px;
+        }
+
+    @media screen and(min-width:1190px) {
+        margin-left: 312px;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+   }
+}
+
+   .header__item {
+       margin-left: 30px;
+
+       & .item:not(:last-child) {
+           margin-left: 30px;
+       }
+
+       @media screen and(max-width:1199px) {
+        width: 138px;
+        margin-left: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+       }
+
+        @media screen and(min-width:1190px) {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        }
+
    }
 
-   .header__tel {
+      .header__tel {
         color: var(--sec-txt-cl);
         display: block;
         padding-top: 32px;
@@ -110,6 +163,15 @@
         &:hover,
         &:focus {
             color: var(--accent-txt-cl);
+        }
+
+        @media screen and(max-width:1190px) {
+        width: 138px;
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        margin-top: 10px;
+        margin-bottom: 21px;
         }
     }
 
@@ -125,4 +187,24 @@
         &:focus {
             color: var(--accent-txt-cl);
         }
+
+     @media screen and(max-width:1190px) {
+        width: 138px;
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        margin-top: 21px;
+        }
    }
+
+//    menu burger
+// .menu{
+//     position: relative;
+//         display: inline-flex;
+//         margin: 0;
+//         margin-left: auto;
+//         padding: 0;
+//         border: none;
+//         background-color: transparent;
+    
+// }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ua">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,11 +25,11 @@
     <header class="">
       <div class="container header">
         <nav class="header__nav">
-          <a href="/" class="header__nav link">Web<span class="item-nav-studio">Studio</span> </a>
+          <a href="/" class="header__logo link">Web<span class="item-nav-studio">Studio</span> </a>
           <ul class="header__items list">
-            <li class="item"><a href="./index.html" class="nav-item link">Студия</a></li>
-            <li class="item"><a href="" class="nav-item studio link">Портфолио</a></li>
-            <li class="item"><a href="" class="nav-item link">Контакты</a></li>
+            <li class="item"><a href="./index.html" class="nav-item link">Студія</a></li>
+            <li class="item"><a href="" class="nav-item studio link">Портфоліо</a></li>
+            <li class="item"><a href="" class="nav-item link">Контакти</a></li>
           </ul>
         </nav>
         <ul class="header__contacts list">
@@ -50,8 +50,52 @@
             >
           </li>
         </ul>
+        <!-- <div class="menu"></div> -->
+        <button type="button" class="menu__button is-open" data-menu-button aria-expanded="true">
+          <svg class="menu__burger" width="40" height="40" aria-label="перемикач мобільго меню">
+            <use class="menu__icon-burger" href="./images/icons.svg#burger"></use>
+            <use class="menu__icon-close" href="./images/icons.svg#close-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
+    <!-- menu -->
+    <div class="menu is-open" data-menu>
+      <div class="menu__container">
+        <ul class="menu__header-items list">
+          <li class="item"><a href="./index.html" class="menu__nav-item link">Студія</a></li>
+          <li class="item">
+            <a href="" class="menu__nav-item studio link">Портфоліо</a>
+          </li>
+          <li class="item"><a href="" class="menu__nav-item link">Контакти</a></li>
+        </ul>
+
+        <ul class="menu__contacts list">
+          <li class="menu__contacts-item">
+            <a href="tel:+380961111111" class="menu__tel link"> +38 096 111 11 11</a>
+          </li>
+          <li class="menu__contacts-item">
+            <a href="mailto:info@devstudio.com" class="menu__mail link"> info@devstudio.com </a>
+          </li>
+        </ul>
+
+        <ul class="menu__socilas list">
+          <li class="menu__socilas-item">
+            <a href="" class="menu__socilas-link link">Instagram</a>
+          </li>
+          <li class="menu__socilas-item">
+            <a href="" class="menu__socilas-link link">Twitter</a>
+          </li>
+          <li class="menu__socilas-item">
+            <a href="" class="menu__socilas-link link">Facebook</a>
+          </li>
+          <li class="menu__socilas-item">
+            <a href="" class="menu__socilas-link link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <!-- main -->
     <main class="mains">
       <!-- button section -->
@@ -59,13 +103,13 @@
         <div class="container btn-section">
           <ul class="list btn-section__lits">
             <li class="main-btn__bottoms">
-              <button type="button" class="main-btn__item">Все</button>
+              <button type="button" class="main-btn__item">Усі</button>
             </li>
             <li class="main-btn__bottoms">
-              <button type="button" class="main-btn__item">Веб-сайты</button>
+              <button type="button" class="main-btn__item">Веб-сайт</button>
             </li>
             <li class="main-btn__bottoms">
-              <button type="button" class="main-btn__item">Приложения</button>
+              <button type="button" class="main-btn__item">Додатки</button>
             </li>
             <li class="main-btn__bottoms">
               <button type="button" class="main-btn__item">Дизайн</button>
@@ -75,12 +119,35 @@
             </li>
           </ul>
           <!-- button sction2 -->
-          <h1 class="visually-hidden">Портфолио</h1>
+          <h1 class="visually-hidden">Портфоліо</h1>
           <ul class="list logo-title">
             <li class="logo-title__link">
               <a href="" class="link">
                 <div class="logo-title__overlay">
-                  <img src="./images/lesson2/img1.jpg" alt="Веб-сайт" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images\portfolio\img1@1x-lg.jpg 1x,
+                        ./images\portfolio\img1@2x-lg.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images\portfolio\img1@1x-md.jpg 1x,
+                        ./images\portfolio\img1@2x-md.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images\portfolio\img0-@1x-sm.jpg 1x,
+                        ./images\portfolio\img0-@2x-sm.jpg 2x
+                      "
+                    />
+                    <img src="./images/lesson2/img1.jpg" alt="Веб-сайт" />
+                  </picture>
                   <div class="overlay">
                     <p class="logo-title__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -98,11 +165,30 @@
             <li class="logo-title__link">
               <a href="" class="link">
                 <div class="logo-title__overlay">
-                  <img
-                    src="./images/lesson2/img2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images\portfolio\img2@1x-lg.jpg 1x,
+                        ./images\portfolio\img2@2x-lg.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images\portfolio\img2@1x-md.jpg 1x,
+                        ./images\portfolio\img2@2x-md.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images\portfolio\img-1@1x-sm.jpg 1x,
+                        ./images\portfolio\img-1@2x-sm.jpg 2x
+                      "
+                    />
+                    <img src="./images/lesson2/img2.jpg" alt="Постер New Orlean vs Golden Star" />
+                  </picture>
                   <div class="overlay">
                     <p class="logo-title__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -122,7 +208,30 @@
             <li class="logo-title__link">
               <a href="" class="link">
                 <div class="logo-title__overlay">
-                  <img src="./images/lesson2/img3.jpg" alt="Ресторан Seafood" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images\portfolio\img3@1x-lg.jpg 1x,
+                        ./images\portfolio\img3@2x-lg.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images\portfolio\img3@1x-md.jpg 1x,
+                        ./images\portfolio\img3@2x-md.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images\portfolio\img-2@1x-sm.jpg 1x,
+                        ./images\portfolio\img-2@2x-sm.jpg 2x
+                      "
+                    />
+                    <img src="./images/lesson2/img3.jpg" alt="Ресторан Seafood" />
+                  </picture>
                   <div class="overlay">
                     <p class="logo-title__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -133,14 +242,37 @@
                 </div>
                 <div class="wrapper">
                   <h2 class="wrapper__main-titles">Ресторан <span lang="en">Seafood</span></h2>
-                  <p class="wrapper__title">Приложение</p>
+                  <p class="wrapper__title">Додаток</p>
                 </div>
               </a>
             </li>
             <li class="logo-title__link">
               <a href="" class="link">
                 <div class="logo-title__overlay">
-                  <img src="./images/lesson2/img4.jpg" alt="Маркетинг" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images\portfolio\img4@1x-lg.jpg 1x,
+                        ./images\portfolio\img4@2x-lg.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images\portfolio\img4@1x-md.jpg 1x,
+                        ./images\portfolio\img4@2x-md.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images\portfolio\img3@1x-sm.jpg 1x,
+                        ./images\portfolio\img3@2x-sm.jpg 2x
+                      "
+                    />
+                    <img src="./images/lesson2/img4.jpg" alt="Маркетинг" />
+                  </picture>
                   <div class="overlay">
                     <p class="logo-title__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -150,7 +282,7 @@
                   </div>
                 </div>
                 <div class="wrapper">
-                  <h2 class="wrapper__main-titles">Проект <span lang="en"> Prime</span></h2>
+                  <h2 class="wrapper__main-titles">Проєкт <span lang="en"> Prime</span></h2>
                   <p class="wrapper__title">Маркетинг</p>
                 </div>
               </a>
@@ -158,7 +290,31 @@
             <li class="logo-title__link">
               <a href="" class="link">
                 <div class="logo-title__overlay">
-                  <img src="./images/lesson2/img5.jpg" alt="Приложение" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images\portfolio\img5@1x-lg.jpg 1x,
+                        ./images\portfolio\img5@2x-lg.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images\portfolio\img5@1x-md.jpg 1x,
+                        ./images\portfolio\img5@2x-md.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images\portfolio\img4@1x-sm.jpg 1x,
+                        ./images\portfolio\img4@2x-sm.jpg 2x
+                      "
+                    />
+                    <img src="./images/lesson2/img5.jpg" alt="Приложение" />
+                  </picture>
+
                   <div class="overlay">
                     <p class="logo-title__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -168,15 +324,38 @@
                   </div>
                 </div>
                 <div class="wrapper">
-                  <h2 class="wrapper__main-titles">Проект <span lang="en"> Boxes</span></h2>
-                  <p class="wrapper__title">Приложение</p>
+                  <h2 class="wrapper__main-titles">Проєкт <span lang="en"> Boxes</span></h2>
+                  <p class="wrapper__title">Додаток</p>
                 </div>
               </a>
             </li>
             <li class="logo-title__link">
               <a href="" class="link">
                 <div class="logo-title__overlay">
-                  <img src="./images/lesson2/img6.jpg" alt="Веб-сайт" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images\portfolio\img6@1x-lg.jpg 1x,
+                        ./images\portfolio\img6@2x-lg.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images\portfolio\img6@1x-md.jpg 1x,
+                        ./images\portfolio\img6@2x-md.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images\portfolio\img5@1x-sm.jpg 1x,
+                        ./images\portfolio\img5@2x-sm.jpg 2x
+                      "
+                    />
+                    <img src="./images/lesson2/img6.jpg" alt="Веб-сайт" />
+                  </picture>
                   <div class="overlay">
                     <p class="logo-title__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -194,7 +373,31 @@
             <li class="logo-title__link">
               <a href="" class="link">
                 <div class="logo-title__overlay">
-                  <img src="./images/lesson2/img7.jpg" alt="Дизайн" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images\portfolio\img7@1x-lg.jpg 1x,
+                        ./images\portfolio\img7@2x-lg.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images\portfolio\img7@1x-md.jpg 1x,
+                        ./images\portfolio\img7@2x-md.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images\portfolio\img6@1x-sm.jpg 1x,
+                        ./images\portfolio\img6@2x-sm.jpg 2x
+                      "
+                    />
+                    <img src="./images/lesson2/img7.jpg" alt="Дизайн" />
+                  </picture>
+
                   <div class="overlay">
                     <p class="logo-title__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -205,7 +408,7 @@
                 </div>
                 <div class="wrapper">
                   <h2 class="wrapper__main-titles">
-                    Издание <span lang="en"> Limited Edition</span>
+                    Видання <span lang="en"> Limited Edition</span>
                   </h2>
                   <p class="wrapper__title">Дизайн</p>
                 </div>
@@ -214,7 +417,31 @@
             <li class="logo-title__link">
               <a href="" class="link">
                 <div class="logo-title__overlay">
-                  <img src="./images/lesson2/img8.jpg" alt="Маркетинг" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images\portfolio\img8@1x-lg.jpg 1x,
+                        ./images\portfolio\img8@2x-lg.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images\portfolio\img8@1x-md.jpg 1x,
+                        ./images\portfolio\img8@2x-md.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images\portfolio\img7@2x-sm.jpg   1x,
+                        ./images\portfolio\img7@2x-sm-1.jpg 2x
+                      "
+                    />
+                    <img src="./images/lesson2/img8.jpg" alt="Маркетинг" />
+                  </picture>
+
                   <div class="overlay">
                     <p class="logo-title__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -224,7 +451,7 @@
                   </div>
                 </div>
                 <div class="wrapper">
-                  <h2 class="wrapper__main-titles">Проект <span lang="en"> LAB</span></h2>
+                  <h2 class="wrapper__main-titles">Проєкт <span lang="en"> LAB</span></h2>
                   <p class="wrapper__title">Маркетинг</p>
                 </div>
               </a>
@@ -232,7 +459,31 @@
             <li class="logo-title__link">
               <a href="" class="link">
                 <div class="logo-title__overlay">
-                  <img src="./images/lesson2/img9.jpg" alt="Приложение" width="370" />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images\portfolio\img9@1x-lg.jpg 1x,
+                        ./images\portfolio\img9@2x-lg.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images\portfolio\img9@1x-md.jpg 1x,
+                        ./images\portfolio\img9@2x-md.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images\portfolio\img8@1x-sm.jpg 1x,
+                        ./images\portfolio\img8@2x-sm.jpg 2x
+                      "
+                    />
+                    <img src="./images/lesson2/img9.jpg" alt="Приложение" />
+                  </picture>
+
                   <div class="overlay">
                     <p class="logo-title__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -243,7 +494,7 @@
                 </div>
                 <div class="wrapper">
                   <h2 lang="en" class="wrapper__main-titles">Growing Business</h2>
-                  <p class="wrapper__title">Приложение</p>
+                  <p class="wrapper__title">Додаток</p>
                 </div>
               </a>
             </li>
@@ -259,7 +510,7 @@
             <span class="footer-web">Web</span>Studio
           </a>
           <address class="footer__adress-items">
-            <p class="footer__address">г. Киев, пр-т Леси Украинки, 26</p>
+            <p class="footer__address">м. Київ, пр-т Лесі Українки, 26</p>
             <ul class="list footer__items">
               <li class="footer__items-title">
                 <a href="mailto:info@devstudio.com" class="link footer__item">info@devstudio.com</a>
@@ -271,7 +522,7 @@
           </address>
         </div>
         <div class="footer__social-heading">
-          <h2 class="footer__heading-title">Прєднуйтесь</h2>
+          <h2 class="footer__heading-title">ПРИЄДНУЙТЕСЬ</h2>
           <ul class="footer__socials lists">
             <li class="">
               <a
@@ -325,9 +576,8 @@
         </div>
         <div class="footer__form">
           <h2 class="footer__form-title">Підпишіться на розсилку</h2>
-
           <div class="footer__form-group">
-            <label class="">
+            <label class="footer__label">
               <input class="footer__form-input" type="email" name="mail" placeholder="E-mail" />
             </label>
             <button class="footer__form-btn" type="submit">
@@ -340,5 +590,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -1,8 +1,27 @@
 .footer__form {
     margin-left: 93px;
+
+    @media screen and(max-width:1199px){
+        margin-top: 60px;
+        margin-left: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @media screen and(min-width:768px), screen and(max-width:1199px) {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
 }
 
 .footer__form-title {
+    margin-left: auto;
+    margin-right: auto;
+    width: 207px;
+    align-items: center;
     margin-bottom: 20px;
 
     font-size: 14px;
@@ -17,6 +36,22 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
+
+    @media screen and(max-width:1199px){
+        width: 450px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0px;
+        // margin-left: auto;
+        // margin-right: auto;
+
+    }
+}
+
+.footer__label {
+@media screen and(max-width:1199px) {
+     width: 100%;
+}
 }
 
 .footer__form-input {
@@ -29,6 +64,10 @@
     background-color: transparent;
 
     color: white;
+
+@media screen and(max-width:1199px) {
+    width: 100%;
+}
 }
 
 .footer__form-icon {

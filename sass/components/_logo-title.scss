@@ -8,6 +8,20 @@
     transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
+.logo-title__link{
+    @media screen and (max-width:480px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width:767px) and (max-width:1199px){
+         width: calc((100% - 1 * 30px) / 2);
+     }
+
+    
+
+
+}
+
 .logo-title__link .link {
     display: block;
 
