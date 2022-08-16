@@ -3,7 +3,8 @@
     flex-wrap: wrap;
     gap: 30px;
     padding-left: 0px;
-    margin-top: 34px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
 
     transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
@@ -16,8 +17,6 @@
     @media screen and (min-width:767px) and (max-width:1199px){
          width: calc((100% - 1 * 30px) / 2);
      }
-
-    
 
 
 }

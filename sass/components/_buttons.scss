@@ -27,8 +27,19 @@
 /* Portfolio buttons */
 
 .btn-section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+
+    @media screen and(min-width:767px) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    @media screen and(min-width:1200px) {
+        margin-top: 94px;
+        margin-bottom: 94px;
+    }
+    
 
     @media screen and(max-width:480px) {
         padding-top: 0px;
@@ -53,8 +64,20 @@
         justify-content: left;
         width: 326px;
         gap: 8px;
-        margin-top: 60px;
+       
     }
+    @media screen and(max-width:768px) {
+        margin-bottom: 40px;
+    }
+    
+    @media screen and(min-width:768px) {
+        margin-bottom: 30px;
+        }
+       
+    @media screen and(min-width:1200px) {
+        margin-bottom: 34px;
+    }
+
 }
 
 .btn-section__lits .main-btn__bottoms+.main-btn__bottoms {

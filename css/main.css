@@ -773,7 +773,7 @@ textarea::placeholder {
   }
 }
 
-.team__setion {
+.team {
   background-color: #f5f5f5;
   padding-top: 60px;
   padding-bottom: 94px;
@@ -951,8 +951,20 @@ textarea::placeholder {
 
 /* Portfolio buttons */
 .btn-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 767px) {
+  .btn-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .btn-section {
+    margin-top: 94px;
+    margin-bottom: 94px;
+  }
 }
 @media screen and (max-width: 480px) {
   .btn-section {
@@ -985,7 +997,21 @@ textarea::placeholder {
             justify-content: left;
     width: 326px;
     gap: 8px;
-    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .btn-section__lits {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .btn-section__lits {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .btn-section__lits {
+    margin-bottom: 34px;
   }
 }
 
@@ -1193,6 +1219,7 @@ textarea::placeholder {
 @media screen and (max-width: 480px) {
   .benefits__list {
     padding-left: 0px;
+    margin: 0;
   }
 }
 @media screen and (min-width: 767px) {
@@ -1203,7 +1230,7 @@ textarea::placeholder {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 15px;
+    gap: 30px;
     margin-left: 0px;
     padding-left: 0px;
     margin-top: 0px;
@@ -1212,37 +1239,44 @@ textarea::placeholder {
 }
 @media screen and (min-width: 1200px) {
   .benefits__list {
-    width: 270px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     gap: 0px;
   }
 }
-.benefits__list .benefits__items {
+
+.benefits__items {
   margin: 0;
   width: 450px;
-  margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .benefits__items:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
-  .benefits__list .benefits__items {
+  .benefits__items {
     width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .benefits__list .benefits__items {
+  .benefits__items {
     margin-right: 30px;
+    width: 270px;
   }
-  .benefits__list .benefits__items:last-child {
+  .benefits__items:last-child {
     margin-right: 0px;
   }
 }
-.benefits__list .lists-items {
+
+.lists-items {
   font-size: 14px;
   line-height: 1.7142857143;
   letter-spacing: 0.03em;
   color: var(--sec-txt-cl);
 }
-.benefits__list .benefits__quality {
+
+.benefits__quality {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1257,18 +1291,18 @@ textarea::placeholder {
   height: 120px;
 }
 @media screen and (max-width: 480px) {
-  .benefits__list .benefits__quality {
+  .benefits__quality {
     width: 450px;
     margin-right: 15px;
   }
 }
 @media screen and (min-width: 768px) {
-  .benefits__list .benefits__quality {
+  .benefits__quality {
     width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .benefits__list .benefits__quality {
+  .benefits__quality {
     width: 270px;
   }
 }
@@ -1336,12 +1370,12 @@ textarea::placeholder {
   z-index: 10;
 }
 
-.client__container {
+.client {
   margin-top: 60px;
   margin-bottom: 60px;
 }
 @media screen and (min-width: 1199px) {
-  .client__container {
+  .client {
     margin-bottom: 94px;
     margin-top: 94px;
   }
@@ -1378,7 +1412,6 @@ textarea::placeholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -1417,6 +1450,7 @@ textarea::placeholder {
 
 .footer {
   background-color: var(--darc-bg-cl);
+  width: 100%;
   display: block;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1431,6 +1465,8 @@ textarea::placeholder {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 @media screen and (max-width: 1190px) {
   .footer__container {
@@ -1468,19 +1504,11 @@ textarea::placeholder {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-@media screen and (max-width: 1190px) {
+@media screen and (max-width: 1199px) {
   .footer__adress {
-    margin-left: 76px;
     margin-right: 0px;
   }
 }
-@media screen and (max-width: 767px) {
-  .footer__adress {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 .footer__social-heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1492,17 +1520,14 @@ textarea::placeholder {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 70px;
 }
-@media screen and (max-width: 1190px) {
+@media screen and (min-width: 1200px) {
   .footer__social-heading {
-    margin-left: 165px;
+    margin-left: 70px;
   }
 }
 @media screen and (max-width: 767px) {
   .footer__social-heading {
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 60px;
   }
 }
@@ -1679,10 +1704,14 @@ textarea::placeholder {
 .footer__form {
   margin-left: 93px;
 }
+@media screen and (max-width: 767px) {
+  .footer__form {
+    margin-left: auto;
+  }
+}
 @media screen and (max-width: 1199px) {
   .footer__form {
     margin-top: 60px;
-    margin-left: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1693,18 +1722,9 @@ textarea::placeholder {
             justify-content: center;
   }
 }
-@media screen and (min-width: 768px), screen and (max-width: 1199px) {
-  .footer__form {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-}
-
 .footer__form-title {
   margin-left: auto;
   margin-right: auto;
-  width: 207px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1830,7 +1850,10 @@ textarea::placeholder {
       flex-wrap: wrap;
   gap: 30px;
   padding-left: 0px;
-  margin-top: 34px;
+  -webkit-margin-before: 0px;
+          margin-block-start: 0px;
+  -webkit-margin-after: 0px;
+          margin-block-end: 0px;
   -webkit-transition: -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   transition: -webkit-box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1) 250ms;

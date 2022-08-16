@@ -1,18 +1,23 @@
 .footer__form {
     margin-left: 93px;
 
+    @media screen and(max-width:767px) {
+        margin-left: auto;
+    }
+    
+
     @media screen and(max-width:1199px){
         margin-top: 60px;
-        margin-left: 0px;
+        // margin-left: 0px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     @media screen and(min-width:768px), screen and(max-width:1199px) {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
+        // margin-left: auto;
+        // margin-right: auto;
+        // display: block;
     }
 
 }
@@ -20,7 +25,7 @@
 .footer__form-title {
     margin-left: auto;
     margin-right: auto;
-    width: 207px;
+    // width: 207px;
     align-items: center;
     margin-bottom: 20px;
 
