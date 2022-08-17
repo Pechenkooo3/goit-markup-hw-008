@@ -86,11 +86,9 @@ body {
     display: block;
     opacity: 1;
     top: 0;
-    width: 480px;
+    width: 100%;
     left: 0;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
+    height: 100%;
     background-color: white;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -982,6 +980,8 @@ textarea::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1172,26 +1172,25 @@ textarea::placeholder {
 .benefits {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  margin-top: 60px;
+  padding-top: 60px;
   padding-right: 15px;
+}
+@media screen and (max-width: 768px) {
+  .benefits {
+    padding-bottom: 50px;
+  }
 }
 @media screen and (min-width: 767px) {
   .benefits {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 50px;
   }
 }
 @media screen and (min-width: 1200px) {
   .benefits {
-    width: 1170px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0px;
   }
 }
 
@@ -1211,6 +1210,10 @@ textarea::placeholder {
 }
 
 .benefits__list {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
   -webkit-padding-start: 0px;
           padding-inline-start: 0px;
   -webkit-box-sizing: content-box;
@@ -1224,7 +1227,6 @@ textarea::placeholder {
 }
 @media screen and (min-width: 767px) {
   .benefits__list {
-    width: 768px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1707,6 +1709,8 @@ textarea::placeholder {
 @media screen and (max-width: 767px) {
   .footer__form {
     margin-left: auto;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -1717,9 +1721,8 @@ textarea::placeholder {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 .footer__form-title {

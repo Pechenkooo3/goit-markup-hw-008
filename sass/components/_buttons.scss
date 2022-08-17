@@ -1,6 +1,4 @@
 .main-section__btn {
-
-
     font-family: inherit;
     background-color: var(--accent-txt-cl);
     color: white;
@@ -55,6 +53,7 @@
 
 .btn-section__lits {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding-left: 0px;
     margin: 0px;

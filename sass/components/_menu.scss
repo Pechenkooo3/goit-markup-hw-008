@@ -9,9 +9,10 @@
         display: block;
         opacity: 1;
         top: 0;
-        width: 480px;
+        width: 100%;
         left: 0;
-        height: max-content;
+        height: 100%;
+        // height: max-content;
         background-color: white;
         flex-direction: column;
         z-index: 1000;}
