@@ -103,6 +103,20 @@ body {
   }
 }
 
+.menu__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
 .menu__header-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,6 +138,7 @@ body {
 
 .menu__contacts {
   margin-top: 302px;
+  margin-bottom: 0;
 }
 
 .menu__contacts-item:not(:last-child) {
@@ -156,7 +171,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 64px;
   margin-bottom: 48px;
 }
 
@@ -948,25 +962,20 @@ textarea::placeholder {
 }
 
 /* Portfolio buttons */
-.btn-section {
-  margin-top: 40px;
-  margin-bottom: 60px;
+.main-btn-section {
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 767px) {
-  .btn-section {
-    margin-top: 60px;
-    margin-bottom: 60px;
+  .main-btn-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .btn-section {
-    margin-top: 94px;
-    margin-bottom: 94px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .btn-section {
-    padding-top: 0px;
+  .main-btn-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -988,25 +997,31 @@ textarea::placeholder {
   padding-left: 0px;
   margin: 0px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .btn-section__lits {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
-    width: 326px;
+    width: 400px;
     gap: 8px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .btn-section__lits {
-    margin-bottom: 40px;
+    padding-bottom: 40px;
   }
 }
 @media screen and (min-width: 768px) {
   .btn-section__lits {
+    margin-bottom: 40px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 30px;
+    gap: 8px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1173,24 +1188,22 @@ textarea::placeholder {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   padding-top: 60px;
-  padding-right: 15px;
 }
 @media screen and (max-width: 768px) {
   .benefits {
     padding-bottom: 50px;
   }
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .benefits {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+    padding-bottom: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
   .benefits {
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 0;
   }
 }
 
@@ -1373,13 +1386,13 @@ textarea::placeholder {
 }
 
 .client {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1199px) {
   .client {
-    margin-bottom: 94px;
-    margin-top: 94px;
+    padding-bottom: 94px;
+    padding-top: 94px;
   }
 }
 
@@ -1703,9 +1716,6 @@ textarea::placeholder {
   fill: white;
 }
 
-.footer__form {
-  margin-left: 93px;
-}
 @media screen and (max-width: 767px) {
   .footer__form {
     margin-left: auto;
@@ -1716,15 +1726,14 @@ textarea::placeholder {
 @media screen and (max-width: 1199px) {
   .footer__form {
     margin-top: 60px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
   }
 }
+@media screen and (min-width: 768px), screen and (max-width: 1199px) {
+  .footer__form {
+    text-align: center;
+  }
+}
+
 .footer__form-title {
   margin-left: auto;
   margin-right: auto;

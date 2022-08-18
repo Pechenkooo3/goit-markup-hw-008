@@ -1,5 +1,5 @@
 .footer__form {
-    margin-left: 93px;
+    // margin-left: 93px;
 
     @media screen and(max-width:767px) {
         margin-left: auto;
@@ -11,15 +11,15 @@
     @media screen and(max-width:1199px){
         margin-top: 60px;
         // margin-left: 0px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: space-around;
         // margin-left: auto;
         // justify-content: center;
     }
 
     @media screen and(min-width:768px), screen and(max-width:1199px) {
-       
+       text-align: center;
         // margin-right: auto;
         // display: block;
     }
