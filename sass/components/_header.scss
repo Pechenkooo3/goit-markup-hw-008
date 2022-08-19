@@ -11,8 +11,8 @@
 .header__nav {
     display: flex;
     align-items: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    // margin-top: 15px;
+    // margin-bottom: 15px;
 }
    
 
@@ -129,15 +129,14 @@
 }
 
    .header__item {
-       margin-left: 30px;
 
-       & .item:not(:last-child) {
-           margin-left: 30px;
+       &:not(:last-child) {
+           margin-right: 30px;
        }
 
        @media screen and(max-width:1199px) {
+        margin-right: 0px;
         width: 138px;
-        margin-left: 0px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;

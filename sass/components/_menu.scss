@@ -12,7 +12,6 @@
         width: 100%;
         left: 0;
         height: 100%;
-        // height: max-content;
         background-color: white;
         flex-direction: column;
         z-index: 1000;}
@@ -29,6 +28,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    padding-left: 40px;
 }
 
 .menu__header-items{
@@ -40,6 +40,10 @@
     line-height: calc(47 / 40);
     letter-spacing: 0.02em;
     color: #212121;
+    padding-inline-start: 0;
+
+    margin-block-start: 0;
+    margin-block-end: 0;
 
     & .studio{
         color: #2196F3;
@@ -49,6 +53,10 @@
 .menu__contacts{
     margin-top: 302px;
     margin-bottom: 0;
+    padding-inline-start: 0;
+
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 .menu__contacts-item{
@@ -77,9 +85,9 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    // margin-top: 64px;
+    padding-inline-start: 0;
     margin-bottom: 48px;
-    // margin-block-start: 0;
+    margin-block-start: 0;
     // margin-block-end: 0;
 }
 

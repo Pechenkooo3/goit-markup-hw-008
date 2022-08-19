@@ -115,6 +115,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
+  padding-left: 40px;
 }
 
 .menu__header-items {
@@ -131,6 +132,12 @@ body {
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: #212121;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 .menu__header-items .studio {
   color: #2196F3;
@@ -139,6 +146,12 @@ body {
 .menu__contacts {
   margin-top: 302px;
   margin-bottom: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
 }
 
 .menu__contacts-item:not(:last-child) {
@@ -171,7 +184,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
   margin-bottom: 48px;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
 }
 
 .menu__socilas-item:not(:first-child) {
@@ -209,8 +226,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
 }
 
 .header__items {
@@ -338,16 +353,13 @@ body {
   }
 }
 
-.header__item {
-  margin-left: 30px;
-}
-.header__item .item:not(:last-child) {
-  margin-left: 30px;
+.header__item:not(:last-child) {
+  margin-right: 30px;
 }
 @media screen and (max-width: 1199px) {
   .header__item {
+    margin-right: 0px;
     width: 138px;
-    margin-left: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1004,9 +1016,8 @@ textarea::placeholder {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
-    width: 400px;
     gap: 8px;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1483,7 +1494,7 @@ textarea::placeholder {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-@media screen and (max-width: 1190px) {
+@media screen and (max-width: 1199px) {
   .footer__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1507,6 +1518,13 @@ textarea::placeholder {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .footer__container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -1535,11 +1553,6 @@ textarea::placeholder {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-@media screen and (min-width: 1200px) {
-  .footer__social-heading {
-    margin-left: 70px;
-  }
 }
 @media screen and (max-width: 767px) {
   .footer__social-heading {

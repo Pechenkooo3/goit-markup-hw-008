@@ -15,7 +15,7 @@
     align-items: baseline;
     justify-content: space-around;
 
-@media screen and(max-width:1190px){
+@media screen and(max-width:1199px){
     display: flex;
     flex-wrap: wrap;
     
@@ -23,10 +23,11 @@
 @media screen and(max-width:767px) {
     display: flex;
     flex-direction: column;
-    ;
-
     justify-content: center;
     align-items: center;
+}
+@media screen and(min-width:1199px) {
+    justify-content: space-between;
 }
 }
 
@@ -54,7 +55,7 @@
     
     @media screen and(min-width:1200px){
         // margin-left: 165px;
-        margin-left: 70px;
+        // margin-left: 70px;
     }
     @media screen and(max-width:767px){
         // margin-left: auto;
