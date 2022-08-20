@@ -302,9 +302,6 @@ body {
   font-size: 14px;
   line-height: 1.1428571429;
   letter-spacing: 0.02em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -322,28 +319,20 @@ body {
     display: none;
   }
 }
-@media screen and (max-width: 1190px) {
+@media screen and (min-width: 768px) {
   .header__contacts {
     font-size: 12px;
     line-height: 1.1666666667;
-    margin-right: 15px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .header__contacts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-left: 96px;
+    margin-left: auto;
+    display: block;
   }
 }
 @media screen and (min-width: 1190px) {
   .header__contacts {
-    margin-left: 312px;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: flex;
+    margin-left: 312px;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -353,12 +342,8 @@ body {
   }
 }
 
-.header__item:not(:last-child) {
-  margin-right: 30px;
-}
 @media screen and (max-width: 1199px) {
   .header__item {
-    margin-right: 0px;
     width: 138px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -368,6 +353,10 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-right: 0px;
+  }
+  .header__item:not(:last-child) {
+    margin-bottom: 10px;
   }
 }
 @media screen and (min-width: 1190px) {
@@ -384,11 +373,19 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .header__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .header__tel {
   color: var(--sec-txt-cl);
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   -webkit-transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
@@ -407,12 +404,16 @@ body {
         -ms-flex-align: center;
             align-items: center;
     padding: 0px;
-    margin-top: 10px;
-    margin-bottom: 21px;
   }
 }
 
 .header__mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--sec-txt-cl);
   display: block;
   padding-top: 32px;
@@ -433,7 +434,6 @@ body {
         -ms-flex-align: center;
             align-items: center;
     padding: 0px;
-    margin-top: 21px;
   }
 }
 

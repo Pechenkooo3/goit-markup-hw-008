@@ -94,7 +94,6 @@
        line-height: calc(16 / 14);
        letter-spacing: 0.02em;
 
-       display: flex;
        align-items: center;
        padding-left: 0px;
        padding-inline-start: 0px;
@@ -104,23 +103,19 @@
 
     @media screen and(max-width:767px) {
         display: none;
-    
         }
-    @media screen and(max-width:1190px) {
-        
-        font-size: 12px;
-        line-height: calc(14 / 12);
-        margin-right: 15px;
-    }
-                
 
     @media screen and(min-width:768px) {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 96px;
+        font-size: 12px;
+        line-height: calc(14 / 12);
+        
+        margin-left: auto;
+        display: block;
+        // margin-inline-start: 0px;
         }
 
     @media screen and(min-width:1190px) {
+        display: flex;
         margin-left: 312px;
         display: flex;
         align-items: center;
@@ -130,19 +125,23 @@
 
    .header__item {
 
-       &:not(:last-child) {
-           margin-right: 30px;
-       }
-
        @media screen and(max-width:1199px) {
-        margin-right: 0px;
         width: 138px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        margin-right: 0px;
+
+        &:not(:last-child){
+            // margin-top: 15px;
+            margin-bottom: 10px;
+        }
        }
 
         @media screen and(min-width:1190px) {
+            &:not(:last-child) {
+                    margin-right: 30px;
+                }
         width: max-content;
         display: flex;
         align-items: center;
@@ -153,7 +152,8 @@
 
       .header__tel {
         color: var(--sec-txt-cl);
-        display: block;
+        display: flex;
+        align-items: center;
         padding-top: 32px;
         padding-bottom: 32px;
 
@@ -169,12 +169,14 @@
         display: flex;
         align-items: center;
         padding: 0px;
-        margin-top: 10px;
-        margin-bottom: 21px;
+        // margin-top: 10px;
+        // margin-bottom: 21px;
         }
     }
 
    .header__mail {
+        display: flex;
+        align-items: center;
        color: var(--sec-txt-cl);
        display: block;
        padding-top: 32px;
@@ -192,18 +194,6 @@
         display: flex;
         align-items: center;
         padding: 0px;
-        margin-top: 21px;
         }
    }
 
-//    menu burger
-// .menu{
-//     position: relative;
-//         display: inline-flex;
-//         margin: 0;
-//         margin-left: auto;
-//         padding: 0;
-//         border: none;
-//         background-color: transparent;
-    
-// }
